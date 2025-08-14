@@ -1,7 +1,7 @@
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
-    background: linear-gradient(135deg, #ff9800 60%, #ff5722 100%);
+    background: linear-gradient(135deg, #ff9800 60%, #ff1744 100%);
 }
 
 .header {
@@ -16,20 +16,23 @@ body {
 }
 
 .header .presentacion {
-    background: rgba(255,255,255,0.95);
+    background: rgba(255,255,255,0.98);
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 32px rgba(255,23,68,0.15);
     padding: 40px 30px;
     text-align: center;
     max-width: 600px;
     margin: auto;
+    animation: fadeIn 1s ease;
 }
 
 .header h1 {
     font-size: 4em;
-    color: #ff5722;
+    color: #ff1744;
     margin-bottom: 10px;
     letter-spacing: 2px;
+    text-shadow: 2px 2px 8px #fff176;
+    animation: pulse 2s infinite;
 }
 
 .header p {
@@ -39,15 +42,16 @@ body {
 }
 
 .indice {
-    background: none;
+    background: linear-gradient(90deg, #ff9800 80%, #ff1744 100%);
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 32px rgba(255,23,68,0.15);
     padding: 30px 0;
     text-align: center;
     max-width: 600px;
     color: white;
     margin: 0 auto;
     margin-top: 0;
+    animation: fadeIn 1.2s ease;
 }
 
 .indice h2 {
@@ -63,9 +67,13 @@ body {
 }
 
 .indice a {
-    color: #fff;
+    color: #fff176;
     font-weight: bold;
     text-decoration: underline;
+    transition: color 0.3s;
+}
+.indice a:hover {
+    color: #ff1744;
 }
 
 .historia {
@@ -77,38 +85,43 @@ body {
 
 .historia-texto {
     font-size: 1.1em;
-    color: #444;
+    color: #ff1744;
     margin-bottom: 20px;
+    animation: fadeIn 1.4s ease;
 }
 
 .historia-img {
     max-width: 350px;
     width: 100%;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 16px rgba(255,23,68,0.15);
     margin: 0 auto;
     display: block;
+    animation: fadeIn 1.6s ease;
 }
 
 .ubicacion {
-    background: #b2dfdb;
+    background: linear-gradient(90deg, #00e676 80%, #00bcd4 100%);
     padding: 20px;
     margin: 20px 0;
     border-radius: 12px;
+    animation: fadeIn 1.8s ease;
 }
 
 .productos {
-    background: #c5cae9;
+    background: linear-gradient(90deg, #ffd600 80%, #ff9800 100%);
     padding: 20px;
     margin: 20px 0;
     border-radius: 12px;
+    animation: fadeIn 2s ease;
 }
 
 .referencias {
-    background: #f8bbd0;
+    background: linear-gradient(90deg, #f8bbd0 80%, #ff1744 100%);
     padding: 20px;
     margin: 20px 0;
     border-radius: 12px;
+    animation: fadeIn 2.2s ease;
 }
 
 section img {
@@ -117,28 +130,34 @@ section img {
     width: 100%;
     margin: 15px auto;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 16px rgba(255,23,68,0.12);
+    animation: fadeIn 2.4s ease;
 }
 
 footer.footer {
-    background: #ff9800;
+    background: linear-gradient(90deg, #ff9800 80%, #ff1744 100%);
     color: white;
     text-align: center;
     padding: 15px 0;
     margin-top: 30px;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    animation: fadeIn 2.6s ease;
 }
 
 .galeria-productos {
-    background: #fffde7;
+    background: linear-gradient(90deg, #fffde7 80%, #ffd600 100%);
     padding: 20px;
     margin: 20px 0;
     border-radius: 12px;
     text-align: center;
+    animation: fadeIn 2.8s ease;
 }
 
 .galeria-productos h2 {
-    color: #ff9800;
+    color: #ff1744;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 8px #fff176;
 }
 
 .productos-imagenes {
@@ -151,9 +170,14 @@ footer.footer {
 .productos-imagenes img {
     max-width: 180px;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 16px rgba(255,23,68,0.12);
     background: #fff;
     padding: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.productos-imagenes img:hover {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(255,23,68,0.25);
 }
 
 .producto {
@@ -161,18 +185,38 @@ footer.footer {
     flex-direction: column;
     align-items: center;
     width: 180px;
+    animation: fadeIn 3s ease;
 }
 
 .producto p {
     margin: 10px 0 0 0;
     font-size: 1em;
-    color: #ff9800;
+    color: #ff1744;
     font-weight: bold;
     text-align: center;
+    background: #fff176;
+    border-radius: 8px;
+    padding: 4px 0;
+    box-shadow: 0 2px 8px rgba(255,23,68,0.08);
+    transition: background 0.3s;
+}
+.producto:hover p {
+    background: #ffd600;
 }
 
 .producto .precio {
     color: #333;
     font-size: 0.95em;
     font-weight: normal;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.7);}
+    70% { box-shadow: 0 0 0 10px rgba(255, 87, 34, 0);}
+    100% { box-shadow: 0 0 0 0 rgba(255, 87, 34, 0);}
 }
